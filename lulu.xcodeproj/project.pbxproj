@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23598F761DC893FB00036D25 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23598F751DC893FB00036D25 /* NavigationViewController.m */; };
+		235B47861DC9832200BB4011 /* WYCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235B47851DC9832200BB4011 /* WYCTabBarViewController.m */; };
+		235B47891DC987CB00BB4011 /* leftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235B47881DC987CB00BB4011 /* leftDrawerViewController.m */; };
+		235B478B1DC987D700BB4011 /* leftDrawerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235B478A1DC987D700BB4011 /* leftDrawerViewController.storyboard */; };
+		235B47901DC997CA00BB4011 /* WYCBlurtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235B478F1DC997CA00BB4011 /* WYCBlurtView.m */; };
+		2370EB771DC9D37A007F0F37 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2370EB741DC9D37A007F0F37 /* UIImage+ImageEffects.m */; };
+		2370EB781DC9D37A007F0F37 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2370EB761DC9D37A007F0F37 /* UIImageView+LBBlurredImage.m */; };
+		2370EB7F1DC9E8AE007F0F37 /* RightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2370EB7E1DC9E8AE007F0F37 /* RightTableViewCell.m */; };
 		2374F23E1DC83375008544A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374F23D1DC83375008544A4 /* main.m */; };
 		2374F2411DC83375008544A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374F2401DC83375008544A4 /* AppDelegate.m */; };
 		2374F24C1DC83375008544A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2374F24A1DC83375008544A4 /* LaunchScreen.storyboard */; };
@@ -19,10 +27,6 @@
 		2374F27E1DC838C0008544A4 /* LeftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2374F27D1DC838C0008544A4 /* LeftViewController.storyboard */; };
 		2374F2811DC838D8008544A4 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374F2801DC838D8008544A4 /* RightViewController.m */; };
 		2374F2831DC838E2008544A4 /* RightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2374F2821DC838E2008544A4 /* RightViewController.storyboard */; };
-		2374F2861DC83903008544A4 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374F2851DC83903008544A4 /* NavViewController.m */; };
-		2374F2881DC83909008544A4 /* NavViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2374F2871DC83909008544A4 /* NavViewController.storyboard */; };
-		2374F28F1DC870FB008544A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2374F28E1DC870FB008544A4 /* Main.storyboard */; };
-		2374F2921DC87109008544A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374F2911DC87109008544A4 /* ViewController.m */; };
 		D83D4433139AAB47712AD185 /* libPods-lulu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47839364E2CE466C5D4502CE /* libPods-lulu.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23598F741DC893FB00036D25 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		23598F751DC893FB00036D25 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		235B47841DC9832200BB4011 /* WYCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYCTabBarViewController.h; sourceTree = "<group>"; };
+		235B47851DC9832200BB4011 /* WYCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYCTabBarViewController.m; sourceTree = "<group>"; };
+		235B47871DC987CB00BB4011 /* leftDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftDrawerViewController.h; sourceTree = "<group>"; };
+		235B47881DC987CB00BB4011 /* leftDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftDrawerViewController.m; sourceTree = "<group>"; };
+		235B478A1DC987D700BB4011 /* leftDrawerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = leftDrawerViewController.storyboard; sourceTree = "<group>"; };
+		235B478E1DC997CA00BB4011 /* WYCBlurtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYCBlurtView.h; path = ../../../../../../customerJob/TotalTest/TotalTest/TotalTest/TotalTest/WYCBlurtView.h; sourceTree = "<group>"; };
+		235B478F1DC997CA00BB4011 /* WYCBlurtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYCBlurtView.m; path = ../../../../../../customerJob/TotalTest/TotalTest/TotalTest/TotalTest/WYCBlurtView.m; sourceTree = "<group>"; };
+		2370EB731DC9D37A007F0F37 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		2370EB741DC9D37A007F0F37 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		2370EB751DC9D37A007F0F37 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
+		2370EB761DC9D37A007F0F37 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
+		2370EB7D1DC9E8AE007F0F37 /* RightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTableViewCell.h; sourceTree = "<group>"; };
+		2370EB7E1DC9E8AE007F0F37 /* RightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTableViewCell.m; sourceTree = "<group>"; };
 		2374F2391DC83375008544A4 /* lulu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lulu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2374F23D1DC83375008544A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2374F23F1DC83375008544A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,12 +85,6 @@
 		2374F27F1DC838D8008544A4 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		2374F2801DC838D8008544A4 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		2374F2821DC838E2008544A4 /* RightViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RightViewController.storyboard; sourceTree = "<group>"; };
-		2374F2841DC83903008544A4 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
-		2374F2851DC83903008544A4 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
-		2374F2871DC83909008544A4 /* NavViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavViewController.storyboard; sourceTree = "<group>"; };
-		2374F28E1DC870FB008544A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2374F2901DC87109008544A4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2374F2911DC87109008544A4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4071C0EACCA18DEDB59E6514 /* Pods-lulu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lulu.release.xcconfig"; path = "Pods/Target Support Files/Pods-lulu/Pods-lulu.release.xcconfig"; sourceTree = "<group>"; };
 		47839364E2CE466C5D4502CE /* libPods-lulu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lulu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71000BC8B7852A64C0487A4C /* Pods-lulu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lulu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lulu/Pods-lulu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +125,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		235B478C1DC994EE00BB4011 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		235B478D1DC997C200BB4011 /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				2370EB721DC9D37A007F0F37 /* lib */,
+				235B478E1DC997CA00BB4011 /* WYCBlurtView.h */,
+				235B478F1DC997CA00BB4011 /* WYCBlurtView.m */,
+			);
+			path = Head;
+			sourceTree = "<group>";
+		};
+		2370EB721DC9D37A007F0F37 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2370EB731DC9D37A007F0F37 /* UIImage+ImageEffects.h */,
+				2370EB741DC9D37A007F0F37 /* UIImage+ImageEffects.m */,
+				2370EB751DC9D37A007F0F37 /* UIImageView+LBBlurredImage.h */,
+				2370EB761DC9D37A007F0F37 /* UIImageView+LBBlurredImage.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2370EB791DC9E87C007F0F37 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				2370EB7D1DC9E8AE007F0F37 /* RightTableViewCell.h */,
+				2370EB7E1DC9E8AE007F0F37 /* RightTableViewCell.m */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
 		2374F2301DC83374008544A4 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +187,7 @@
 		2374F23B1DC83375008544A4 /* lulu */ = {
 			isa = PBXGroup;
 			children = (
+				235B478C1DC994EE00BB4011 /* lib */,
 				2374F2711DC8381C008544A4 /* Center */,
 				2374F2721DC8381C008544A4 /* Left */,
 				2374F2731DC8381C008544A4 /* Nav */,
@@ -146,9 +197,6 @@
 				2374F24A1DC83375008544A4 /* LaunchScreen.storyboard */,
 				2374F24D1DC83375008544A4 /* Info.plist */,
 				2374F23C1DC83375008544A4 /* Supporting Files */,
-				2374F28E1DC870FB008544A4 /* Main.storyboard */,
-				2374F2901DC87109008544A4 /* ViewController.h */,
-				2374F2911DC87109008544A4 /* ViewController.m */,
 			);
 			path = lulu;
 			sourceTree = "<group>";
@@ -203,9 +251,13 @@
 		2374F2731DC8381C008544A4 /* Nav */ = {
 			isa = PBXGroup;
 			children = (
-				2374F2841DC83903008544A4 /* NavViewController.h */,
-				2374F2851DC83903008544A4 /* NavViewController.m */,
-				2374F2871DC83909008544A4 /* NavViewController.storyboard */,
+				23598F741DC893FB00036D25 /* NavigationViewController.h */,
+				23598F751DC893FB00036D25 /* NavigationViewController.m */,
+				235B47841DC9832200BB4011 /* WYCTabBarViewController.h */,
+				235B47851DC9832200BB4011 /* WYCTabBarViewController.m */,
+				235B47871DC987CB00BB4011 /* leftDrawerViewController.h */,
+				235B47881DC987CB00BB4011 /* leftDrawerViewController.m */,
+				235B478A1DC987D700BB4011 /* leftDrawerViewController.storyboard */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -213,9 +265,11 @@
 		2374F2741DC8381C008544A4 /* Right */ = {
 			isa = PBXGroup;
 			children = (
+				235B478D1DC997C200BB4011 /* Head */,
 				2374F27F1DC838D8008544A4 /* RightViewController.h */,
 				2374F2801DC838D8008544A4 /* RightViewController.m */,
 				2374F2821DC838E2008544A4 /* RightViewController.storyboard */,
+				2370EB791DC9E87C007F0F37 /* tableView */,
 			);
 			path = Right;
 			sourceTree = "<group>";
@@ -298,7 +352,7 @@
 				TargetAttributes = {
 					2374F2381DC83374008544A4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = HV5ET565XY;
+						DevelopmentTeam = 358B5J757A;
 						ProvisioningStyle = Automatic;
 					};
 					2374F2511DC83375008544A4 = {
@@ -340,13 +394,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2374F28F1DC870FB008544A4 /* Main.storyboard in Resources */,
 				2374F24C1DC83375008544A4 /* LaunchScreen.storyboard in Resources */,
+				235B478B1DC987D700BB4011 /* leftDrawerViewController.storyboard in Resources */,
 				2374F2701DC83448008544A4 /* Assets.xcassets in Resources */,
 				2374F27E1DC838C0008544A4 /* LeftViewController.storyboard in Resources */,
 				2374F2791DC8389C008544A4 /* CenterViewController.storyboard in Resources */,
 				2374F2831DC838E2008544A4 /* RightViewController.storyboard in Resources */,
-				2374F2881DC83909008544A4 /* NavViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,13 +472,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2374F2921DC87109008544A4 /* ViewController.m in Sources */,
+				2370EB7F1DC9E8AE007F0F37 /* RightTableViewCell.m in Sources */,
 				2374F27C1DC838B6008544A4 /* LeftViewController.m in Sources */,
+				2370EB781DC9D37A007F0F37 /* UIImageView+LBBlurredImage.m in Sources */,
 				2374F2771DC83890008544A4 /* CenterViewController.m in Sources */,
+				235B47861DC9832200BB4011 /* WYCTabBarViewController.m in Sources */,
+				235B47901DC997CA00BB4011 /* WYCBlurtView.m in Sources */,
+				23598F761DC893FB00036D25 /* NavigationViewController.m in Sources */,
+				235B47891DC987CB00BB4011 /* leftDrawerViewController.m in Sources */,
+				2370EB771DC9D37A007F0F37 /* UIImage+ImageEffects.m in Sources */,
 				2374F2411DC83375008544A4 /* AppDelegate.m in Sources */,
 				2374F23E1DC83375008544A4 /* main.m in Sources */,
 				2374F2811DC838D8008544A4 /* RightViewController.m in Sources */,
-				2374F2861DC83903008544A4 /* NavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = HV5ET565XY;
+				DEVELOPMENT_TEAM = 358B5J757A;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -576,7 +634,7 @@
 				);
 				INFOPLIST_FILE = lulu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-21.lulu";
+				PRODUCT_BUNDLE_IDENTIFIER = ceshitestlulu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -587,7 +645,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = HV5ET565XY;
+				DEVELOPMENT_TEAM = 358B5J757A;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -597,7 +655,7 @@
 				);
 				INFOPLIST_FILE = lulu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-21.lulu";
+				PRODUCT_BUNDLE_IDENTIFIER = ceshitestlulu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

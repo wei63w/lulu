@@ -7,6 +7,8 @@
 //
 
 #import "LeftViewController.h"
+#import <MMDrawerBarButtonItem.h>
+#import <UIViewController+MMDrawerController.h>
 
 @interface LeftViewController ()
 
@@ -17,7 +19,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setupLeftMenuButton];
+    [self setRightMenuBtn];
 }
+
+
+#pragma mark - Button Handlers
+-(void)setRightMenuBtn{
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
+    [btn setTitle:@"注册" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(rightBtnTouch) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *drm = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    
+
+    
+//    MMDrawerBarButtonItem * rightDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(rightBtnTouch)];
+    [self.navigationItem setRightBarButtonItem:drm animated:YES];
+}
+-(void)rightBtnTouch{
+    NSLog(@"注册点击");
+}
+-(void)setupLeftMenuButton{
+    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
+}
+-(void)leftDrawerButtonPress:(id)sender{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+-(void)doubleTap:(UITapGestureRecognizer*)gesture{
+    [self.mm_drawerController bouncePreviewForDrawerSide:MMDrawerSideLeft completion:nil];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

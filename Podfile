@@ -13,4 +13,5 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'Pgyer'
 pod 'PgyUpdate'
+pod 'HyphenateLite_CN'
 end

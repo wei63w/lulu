@@ -9,15 +9,14 @@
 #import "AppDelegate.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <MMDrawerController.h>
-#import "CenterViewController.h"
-#import "LeftViewController.h"
-#import "NavViewController.h"
-#import "RightViewController.h"
+#import "WYCTabBarViewController.h"
+#import <HyphenateLite_CN/EMSDK.h>
+#import <EMSDK.h>
 
 @interface AppDelegate ()
 
 @property (nonatomic, strong) MMDrawerController *drawerController;
-@property (nonatomic, strong) UITabBarController *tabBarController;
+@property (nonatomic, strong) WYCTabBarViewController *tabBar;
 
 @end
 
@@ -27,65 +26,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.tabBarController = [[UITabBarController alloc]init];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];// [[UIApplication sharedApplication] keyWindow];
     
+    self.tabBar = [[WYCTabBarViewController alloc]init];
     
+
+    UIStoryboard *leftDrawersb = [UIStoryboard storyboardWithName:@"leftDrawerViewController" bundle:nil];
+    UIViewController *leftDrawer = leftDrawersb.instantiateInitialViewController;
     
-    UIStoryboard *leftsb = [UIStoryboard storyboardWithName:@"LeftViewController" bundle:nil];
-    UIViewController *leftvc = leftsb.instantiateInitialViewController;
-    leftvc.title = @"left";
-    leftvc.tabBarItem.image = [UIImage imageNamed:@"tab_icon1_normal.png"];
-    leftvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_icon1_selcet.png"];
-    
-    
-    
-    UIStoryboard *centersb = [UIStoryboard storyboardWithName:@"CenterViewController" bundle:nil];
-    UIViewController *centervc = centersb.instantiateInitialViewController;
-    centervc.title = @"center";
-    centervc.tabBarItem.image = [UIImage imageNamed:@"tab_icon2_normal.png"];
-    centervc.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_icon2_selcet.png"];
-    
-    
-    UIStoryboard *rightsb = [UIStoryboard storyboardWithName:@"RightViewController" bundle:nil];
-    UIViewController *rightvc = rightsb.instantiateInitialViewController;
-    rightvc.title = @"right";
-    rightvc.tabBarItem.image = [UIImage imageNamed:@"tab_icon5_normal.png"];
-    rightvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_icon5_selcet.png"];
-    
-    
-    
-    [self.tabBarController addChildViewController:leftvc];
-    [self.tabBarController addChildViewController:centervc];
-    [self.tabBarController addChildViewController:rightvc];
-    
-    UIStoryboard *navsb = [UIStoryboard storyboardWithName:@"NavViewController" bundle:nil];
-    UIViewController *navvc = navsb.instantiateInitialViewController;
-    
-    
-    _drawerController = [[MMDrawerController alloc]initWithCenterViewController:self.tabBarController leftDrawerViewController:navvc];
+
+    _drawerController = [[MMDrawerController alloc]initWithCenterViewController:self.tabBar leftDrawerViewController:leftDrawer];
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
-    
-    
-//    
-//    [_drawerController setGestureShouldRecognizeTouchBlock:^BOOL(MMDrawerController *drawerController, UIGestureRecognizer *gesture, UITouch *touch) {
-//         BOOL shouldRecognizeTouch = NO;
-//         if(drawerController.openSide == MMDrawerSideNone &&
-//            [gesture isKindOfClass:[UIPanGestureRecognizer class]]){
-////             UIView * customView = [drawerController.centerViewController myCustomSubview];
-////             CGPoint location = [touch locationInView:customView];
-////             shouldRecognizeTouch = (CGRectContainsPoint(customView.bounds, location));
-//             //判断哪个控制器可以滑到抽屉
-//             UINavigationController *nav = (UINavigationController *)drawerController.centerViewController;
-//             if ([nav.topViewController isKindOfClass:[LeftViewController class]]) {
-//                 shouldRecognizeTouch = YES;//yes 标示可以滑到左右抽屉
-//             }else{
-//                 shouldRecognizeTouch = NO;
-//             }
-//         }
-//         return shouldRecognizeTouch;
-//     }];
+
     [_drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
          UIViewController * sideDrawerViewController;
          if(drawerSide == MMDrawerSideLeft){
@@ -101,6 +58,19 @@
     
     [self.window makeKeyAndVisible];
     
+    
+    //AppKey:注册的AppKey，详细见下面注释。
+    //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
+    EMOptions *options = [EMOptions optionsWithAppkey:@"782385854#lulu"];
+    options.apnsCertName = @"lulu";
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+    
+    
+    
+    
+    
+    
+    
     return YES;
 }
 
@@ -110,15 +80,22 @@
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
-
+// APP进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
+
 }
 
-
+// APP将要从后台返回
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
+    
 }
 
 

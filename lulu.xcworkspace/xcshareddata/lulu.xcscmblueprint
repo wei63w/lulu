@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "35EB5325BA79EDE929450B825199BD0C88D008C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "47AAA79D0C9B0FB8047024C65747D1853F1605C7" : 9223372036854775807,
+    "35EB5325BA79EDE929450B825199BD0C88D008C0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7B0F92E7-08FE-4E76-9B58-EC8F3E6A4748",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "47AAA79D0C9B0FB8047024C65747D1853F1605C7" : "..\/..\/customerJob\/TotalTest\/TotalTest",
+    "35EB5325BA79EDE929450B825199BD0C88D008C0" : "lulu\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "lulu",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "lulu.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wei63w\/lulu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35EB5325BA79EDE929450B825199BD0C88D008C0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wei63w\/TotalTest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "47AAA79D0C9B0FB8047024C65747D1853F1605C7"
+    }
+  ]
+}
