@@ -39,12 +39,14 @@
     leftvc.tabBarItem.title = @"left";
     
     
+    
+    
     UIStoryboard *centersb = [UIStoryboard storyboardWithName:@"CenterViewController" bundle:nil];
     UIViewController *centervc = centersb.instantiateInitialViewController;
-    centervc.title = @"center";
+    centervc.title = @"通讯录";
     centervc.tabBarItem.image = [UIImage imageNamed:@"tab_icon2_normal.png"];
     centervc.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_icon2_selcet.png"];
-    leftvc.tabBarItem.title = @"center";
+    leftvc.tabBarItem.title = @"通讯录";
     
     UIStoryboard *rightsb = [UIStoryboard storyboardWithName:@"RightViewController" bundle:nil];
     UIViewController *rightvc = rightsb.instantiateInitialViewController;

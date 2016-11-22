@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "079CEDE0ED4B18C03A45FAA1C45085333F1A056C" : 9223372036854775807,
     "47AAA79D0C9B0FB8047024C65747D1853F1605C7" : 9223372036854775807,
     "35EB5325BA79EDE929450B825199BD0C88D008C0" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7B0F92E7-08FE-4E76-9B58-EC8F3E6A4748",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "079CEDE0ED4B18C03A45FAA1C45085333F1A056C" : "..\/..\/customerJob\/TotalTest\/easeui_ios",
     "47AAA79D0C9B0FB8047024C65747D1853F1605C7" : "..\/..\/customerJob\/TotalTest\/TotalTest",
     "35EB5325BA79EDE929450B825199BD0C88D008C0" : "lulu\/"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "lulu.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/easemob\/easeui_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "079CEDE0ED4B18C03A45FAA1C45085333F1A056C"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wei63w\/lulu.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

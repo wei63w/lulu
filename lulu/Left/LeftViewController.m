@@ -10,7 +10,7 @@
 #import <MMDrawerBarButtonItem.h>
 #import <UIViewController+MMDrawerController.h>
 
-@interface LeftViewController ()
+@interface LeftViewController ()<EaseMessageViewControllerDelegate,EaseMessageViewControllerDataSource>
 
 @end
 
@@ -21,26 +21,57 @@
     // Do any additional setup after loading the view.
     
     [self setupLeftMenuButton];
-    [self setRightMenuBtn];
+    
 }
 
+//具体创建自定义Cell的样例：
+- (UITableViewCell *)messageViewController:(UITableView *)tableView cellForMessageModel:(id<IMessageModel>)model
+{
+    //样例为如果消息是文本消息显示用户自定义cell
+    if (model.bodyType == EMMessageBodyTypeText) {
+        NSString *CellIdentifier = [EaseMessageCell cellIdentifierWithModel:model];
+        //CustomMessageCell为用户自定义cell,继承了EaseBaseMessageCell
+        EaseMessageCell *cell = (EaseMessageCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[EaseMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier model:model];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        cell.model = model;
+        return cell;
+    }
+    return nil;
+}
+- (CGFloat)messageViewController:(EaseMessageViewController *)viewController
+           heightForMessageModel:(id<IMessageModel>)messageModel
+                   withCellWidth:(CGFloat)cellWidth
+{
+    //样例为如果消息是文本消息使用用户自定义cell的高度
+    if (messageModel.bodyType == EMMessageBodyTypeText) {
+        //CustomMessageCell为用户自定义cell,继承了EaseBaseMessageCell
+        return [EaseMessageCell cellHeightWithModel:messageModel];
+    }
+    return 0.f;
+}
 
 #pragma mark - Button Handlers
--(void)setRightMenuBtn{
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
-    [btn setTitle:@"注册" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(rightBtnTouch) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *drm = [[UIBarButtonItem alloc]initWithCustomView:btn];
+//-(void)setRightMenuBtn{
+//    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
+//    [btn setTitle:@"登录" forState:UIControlStateNormal];
+//    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//    [btn addTarget:self action:@selector(rightBtnTouch) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *drm = [[UIBarButtonItem alloc]initWithCustomView:btn];
     
 
-    
-//    MMDrawerBarButtonItem * rightDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(rightBtnTouch)];
-    [self.navigationItem setRightBarButtonItem:drm animated:YES];
-}
--(void)rightBtnTouch{
-    NSLog(@"注册点击");
-}
+//    [self.navigationItem setRightBarButtonItem:drm animated:YES];
+//}
+//-(void)rightBtnTouch{
+//    NSLog(@"注册点击");
+//    
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LoginViewController" bundle:nil];
+//    UIViewController *vc = sb.instantiateInitialViewController;
+//    vc.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 -(void)setupLeftMenuButton{
     MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EaseMessageViewController.h"
 
-@interface LeftViewController : UIViewController
+
+@interface LeftViewController : EaseMessageViewController
 
 @end

@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setFrame:CGRectMake(0, 0, 100, 100)];
+    [btn setTitle:@"xxxx" forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:btn];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

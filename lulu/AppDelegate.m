@@ -10,8 +10,10 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <MMDrawerController.h>
 #import "WYCTabBarViewController.h"
-#import <HyphenateLite_CN/EMSDK.h>
-#import <EMSDK.h>
+#import "EMSDK.h"
+#import "EaseUI.h"
+
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,46 +30,64 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];// [[UIApplication sharedApplication] keyWindow];
     
-    self.tabBar = [[WYCTabBarViewController alloc]init];
-    
-
-    UIStoryboard *leftDrawersb = [UIStoryboard storyboardWithName:@"leftDrawerViewController" bundle:nil];
-    UIViewController *leftDrawer = leftDrawersb.instantiateInitialViewController;
-    
-
-    _drawerController = [[MMDrawerController alloc]initWithCenterViewController:self.tabBar leftDrawerViewController:leftDrawer];
-    [self.drawerController setShowsShadow:NO];
-    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
-    [self.drawerController setMaximumRightDrawerWidth:200.0];
-    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-    
-
-    [_drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
-         UIViewController * sideDrawerViewController;
-         if(drawerSide == MMDrawerSideLeft){
-             sideDrawerViewController = drawerController.leftDrawerViewController;
-         }
-         else if(drawerSide == MMDrawerSideRight){
-             sideDrawerViewController = drawerController.rightDrawerViewController;
-         }
-         [sideDrawerViewController.view setAlpha:percentVisible];
-     }];
-    
-    [self.window setRootViewController:self.drawerController];
-    
+    UIStoryboard *loginsb = [UIStoryboard storyboardWithName:@"LoginViewController" bundle:nil];
+    UIViewController *loginvc = loginsb.instantiateInitialViewController;
+    [self.window setRootViewController:loginvc];
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
+    
+    
+    
+//    self.tabBar = [[WYCTabBarViewController alloc]init];
+//    
+//
+//    UIStoryboard *leftDrawersb = [UIStoryboard storyboardWithName:@"leftDrawerViewController" bundle:nil];
+//    UIViewController *leftDrawer = leftDrawersb.instantiateInitialViewController;
+//    
+//
+//    _drawerController = [[MMDrawerController alloc]initWithCenterViewController:self.tabBar leftDrawerViewController:leftDrawer];
+//    [self.drawerController setShowsShadow:NO];
+//    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+//    [self.drawerController setMaximumRightDrawerWidth:200.0];
+//    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+//    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+//    
+//
+//    [_drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+//         UIViewController * sideDrawerViewController;
+//         if(drawerSide == MMDrawerSideLeft){
+//             sideDrawerViewController = drawerController.leftDrawerViewController;
+//         }
+//         else if(drawerSide == MMDrawerSideRight){
+//             sideDrawerViewController = drawerController.rightDrawerViewController;
+//         }
+//         [sideDrawerViewController.view setAlpha:percentVisible];
+//     }];
+//    
+//    [self.window setRootViewController:self.drawerController];
+//    
+//    [self.window makeKeyAndVisible];
     
     
     //AppKey:注册的AppKey，详细见下面注释。
     //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
-    EMOptions *options = [EMOptions optionsWithAppkey:@"782385854#lulu"];
-    options.apnsCertName = @"lulu";
+    NSString *appkey =@"782385854#lulu";
+    NSString *cername = @"lulu";
+    
+    EMOptions *options = [EMOptions optionsWithAppkey:appkey];
+    options.apnsCertName = cername;
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
     
     
-    
+    [[EaseSDKHelper shareHelper] hyphenateApplication:application
+                        didFinishLaunchingWithOptions:launchOptions
+                                               appkey:appkey
+                                         apnsCertName:cername
+                                          otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
     
     
     

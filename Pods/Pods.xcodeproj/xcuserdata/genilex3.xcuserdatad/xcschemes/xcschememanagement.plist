@@ -14,17 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MJExtension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,17 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30931D5BE6AC9D10A0015FE1693A93E8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>550F7EEAEEA17E3F92C873912E23B01C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70BC44266C6FFE30D2C57129458E070B</key>
+		<key>668833AD77ECD6A592897D5BFC180936</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1C4B91A8EBDD09197BAAC822F4211C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<key>DFB3BD99A3F36855F77579F7B9ADCB00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

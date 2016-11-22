@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMSDK.h"
+#import "EaseUsersListViewController.h"
 
-@interface CenterViewController : UIViewController
+@interface CenterViewController : EaseUsersListViewController
 
 @end
